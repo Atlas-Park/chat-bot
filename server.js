@@ -1,14 +1,18 @@
 import "dotenv/config";
 import express from "express";
 import OpenAI from "openai";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MAX_MESSAGES = 30;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PUBLIC_DIR = path.join(__dirname, "public");
 
 app.disable("x-powered-by");
 app.use(express.json({ limit: "100kb" }));
-app.use(express.static("public"));
+app.use(express.static(PUBLIC_DIR));
 
 app.post("/api/chat", async (req, res) => {
   if (!process.env.OPENAI_API_KEY) {
@@ -60,7 +64,7 @@ app.post("/api/chat", async (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile("index.html", { root: "public" });
+  res.status(404).sendFile(path.join(PUBLIC_DIR, "index.html"));
 });
 
 if (process.env.NODE_ENV !== "production") {
