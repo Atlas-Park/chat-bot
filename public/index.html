@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="대화의 흐름을 기억하는 AI 챗봇" />
-    <meta name="theme-color" content="#f3f0e8" />
+    <meta name="theme-color" content="#f7f8fa" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
     <title>Moyo — AI Chat</title>
@@ -24,14 +24,10 @@
 
       <main class="chat" id="chat" aria-live="polite">
         <section class="welcome" id="welcome">
-          <p class="eyebrow">YOUR THOUGHT PARTNER</p>
-          <h1>무엇을 함께<br />생각해 볼까요?</h1>
-          <p class="welcome-copy">대화의 흐름을 기억하며 답해 드려요.</p>
-          <div class="suggestions" aria-label="추천 질문">
-            <button type="button">오늘 할 일을 우선순위로 정리해 줘</button>
-            <button type="button">새로운 프로젝트 아이디어를 같이 고민해 줘</button>
-            <button type="button">복잡한 개념을 쉽게 설명해 줘</button>
-          </div>
+          <div class="welcome-orb" aria-hidden="true"><span></span></div>
+          <p class="eyebrow">MOYO AI</p>
+          <h1>오늘은 무엇을<br />도와드릴까요?</h1>
+          <p class="welcome-copy">생각을 정리하고, 답을 찾고, 다음 단계로 나아가세요.</p>
         </section>
         <div class="messages" id="messages"></div>
       </main>
@@ -44,6 +40,11 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14" /></svg>
           </button>
         </form>
+        <div class="suggestions" aria-label="추천 질문">
+          <button type="button"><span>계획</span>오늘 할 일을 정리해 줘</button>
+          <button type="button"><span>아이디어</span>새 프로젝트를 같이 고민해 줘</button>
+          <button type="button"><span>설명</span>복잡한 개념을 쉽게 알려 줘</button>
+        </div>
         <p class="notice">AI는 실수할 수 있어요. 중요한 정보는 한 번 더 확인해 주세요.</p>
       </footer>
     </div>

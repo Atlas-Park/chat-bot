@@ -37,6 +37,7 @@ async function sendMessage(text) {
   if (!cleanText || loading) return;
 
   loading = true;
+  document.body.classList.add("chatting");
   welcome.hidden = true;
   messages.push({ role: "user", content: cleanText });
   addMessage("user", cleanText);
@@ -86,6 +87,7 @@ suggestions.forEach((button) => {
 
 clearButton.addEventListener("click", () => {
   messages = [];
+  document.body.classList.remove("chatting");
   messagesEl.replaceChildren();
   welcome.hidden = false;
   input.value = "";
