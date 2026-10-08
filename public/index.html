@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="대화의 흐름을 기억하는 AI 챗봇" />
-    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="마음을 비우고 지혜를 얻는 AI 불교 상담" />
+    <meta name="theme-color" content="#f8f5ee" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>Moyo — AI Chat</title>
+    <title>고요 — 마음을 비추는 대화</title>
   </head>
   <body>
     <div class="shell">
       <header class="topbar">
-        <a class="brand" href="/" aria-label="Moyo 홈">
-          <span class="brand-mark" aria-hidden="true">M</span>
-          <span>Moyo</span>
+        <a class="brand" href="/" aria-label="고요 홈">
+          <span class="brand-mark" aria-hidden="true">◌</span>
+          <span>고요</span>
         </a>
-        <div class="status"><span aria-hidden="true"></span> gpt-4o-mini</div>
+        <div class="status"><span aria-hidden="true"></span> 마음 수행 중</div>
         <button class="clear-button" id="clearButton" type="button" title="새 대화 시작">
           새 대화
         </button>
@@ -24,10 +24,10 @@
 
       <main class="chat" id="chat" aria-live="polite">
         <section class="welcome" id="welcome">
-          <div class="welcome-orb" aria-hidden="true"><span></span></div>
-          <p class="eyebrow">MOYO AI</p>
-          <h1>오늘은 무엇을<br />도와드릴까요?</h1>
-          <p class="welcome-copy">생각을 정리하고, 답을 찾고, 다음 단계로 나아가세요.</p>
+          <div class="monk-wrap"><span class="halo" aria-hidden="true"></span><img src="/novice-monk.png" alt="평온하게 명상하는 동자승" /></div>
+          <p class="eyebrow">마음을 비추는 대화</p>
+          <h1>그 고민,<br />잠시 내려놓아 보세요.</h1>
+          <p class="welcome-copy">답을 재촉하지 않아도 괜찮습니다. 천천히 함께 바라볼게요.</p>
         </section>
         <div class="messages" id="messages"></div>
       </main>
@@ -35,17 +35,17 @@
       <footer class="composer-wrap">
         <form class="composer" id="chatForm">
           <label class="sr-only" for="messageInput">메시지 입력</label>
-          <textarea id="messageInput" rows="1" maxlength="8000" placeholder="메시지를 입력하세요" required></textarea>
+          <textarea id="messageInput" rows="1" maxlength="8000" placeholder="지금 마음에 걸리는 것을 들려주세요" required></textarea>
           <button class="send-button" id="sendButton" type="submit" aria-label="메시지 보내기">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14" /></svg>
           </button>
         </form>
         <div class="suggestions" aria-label="추천 질문">
-          <button type="button"><span>계획</span>오늘 할 일을 정리해 줘</button>
-          <button type="button"><span>아이디어</span>새 프로젝트를 같이 고민해 줘</button>
-          <button type="button"><span>설명</span>복잡한 개념을 쉽게 알려 줘</button>
+          <button type="button"><span>마음</span>불안한 마음을 다스리고 싶어요</button>
+          <button type="button"><span>관계</span>미운 사람을 어떻게 대해야 할까요?</button>
+          <button type="button"><span>길</span>무엇을 원하는지 모르겠어요</button>
         </div>
-        <p class="notice">AI는 실수할 수 있어요. 중요한 정보는 한 번 더 확인해 주세요.</p>
+        <p class="notice">AI의 조언은 수행과 성찰을 돕기 위한 것이며 전문 상담을 대신하지 않습니다.</p>
       </footer>
     </div>
     <script src="/app.js" defer></script>
